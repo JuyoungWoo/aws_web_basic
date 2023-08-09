@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #chk1 { /*# : id명에 해당하는 요소 스타일 지정*/
+      display: none;
+    }
+    #chk1 + label { /*checkbox의 형제 요소 중 label을 찾음 -> body 내부에서 label 바로 밑의 label을 가리킴*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    #chk1:checked + label::after {
+      content: "";
+      width: 70%;
+      height: 70%;
+      
+      display: flex;
+    }
+    
+  </style>
+</head>
+<body>
+  <div>
+    <label for="chk1"></label> 
+    <input type="checkbox" id="chk1">
+  </div>
+  <div>
+    <label for=""></label>
+  </div>
+  
+  <div>
+    <label for="username">아이디</label> <input type="checkbox" id = "username">
+    <!-- id: input의 변수명 지정--> <!-- for : 지정한 id를 값으로 지정해놓으면 '아이디' 라벨 클릭 시 자동 포커싱됨-->
+    <!-- label을 사용하는 이유: for 의 포커싱 기능을 통해 스타일지정이 불가능한 체크박스 구현 시 라벨에 체크박스를 넣음-->
+  </div>
+  <div>
+    <label for="">비밀번호</label> <input type="password"> <!--type password -> 검은색 점으로 표시-->
+  </div>
+  <div>
+    <span>아이디</span> <input type="text">
+  </div>
+  
+  
+  <!-- div와 span의 차이 -->
+  <div>안녕</div>하세요
+   <!-- div: 여러 요소를 블록단위로 그룹을 묶을 때 사용.
+     div은 가로 전체를 통째로 차지(display: block;) -> 줄바꿈됨 -->
+  <span>안녕</span>하세요
+   <!-- span : 글자 단위로 그룹화 시킬 때 사용
+    특정 글자만 style을 주고 싶을 때 span으로 묶음-->
+</body>
+</html>

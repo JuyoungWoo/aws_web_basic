@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    /*
+    캐스케이딩의 의하면 절차지향이지만
+    스타일 우선순위에 의해
+    !important > 인라인 > id > 클래스 > 타입
+    !important가 여러개 있을 경우 !impor 중에서 우선순위 지정
+    */
+    
+    /*클래스 선택자*/
+    .c-button {
+      color: yellow;
+    }
+    
+    /*타입 선택자*/
+    .test-div button { /*이 클래스의 요소 내부에 있는 button 타입만 스타일 지정 */
+      /*c-button이 클래스라서 우선순위가 높다고 생각할 수 있지만,
+      우선순위 점수를 합산하여 결정하기 때문에 이 선택자가 가장 우선순위가 높음*/
+      color: red;
+    }
+    /*id 선택자*/
+    /* #btn {
+      color: blue;
+    } */
+    
+  </style>
+</head>
+<body>
+  <div class="test-div">
+    <button id="btn" class="c-button">버튼</button>
+  </div> <!-- 부모 요소 의 클래스 와 자식 요소의 클래스-->
+  
+  <!--클래스 여러개 지정: class ="클래스1(띄어쓰기)클래스2"-->
+  
+  <button>버튼2</button>
+  
+</body>
+</html>

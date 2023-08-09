@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*flexbox 예제*/
+    .flex-box-container { /*내부 요소를 정렬하는 것이지만 부모 요소에 스타일 부여해줘야함*/
+      display: flex; /*우측 정렬로 하나씩 쌓음*/
+      /*주축과 교차축을 바꿔줌*/
+      flex-direction: row; 
+      justify-content: space-between; 
+      /*주축에서 가운데 */
+      /* align-items: center; 교차축에서 가운데 */
+      
+      /*밑으로 정렬 -> 가운데 정렬하고 싶으면 aling-items: center*/
+      flex-wrap: wrap;
+      
+    
+      margin: 30px 0px;
+      border: 1px solid #dbdbdb;
+      padding: 10px;
+      width: 100%;
+      /* text-align: center;  */
+      /*category-items가 글자 취급이 되고 있기 때문에 text-align을 사용*/
+      /* line-height: 70px; */
+    }
+    
+    .category-items {
+      display: inline-block;
+      margin: 5px 5px;
+      border: 1px solid #3e3e3e;
+      border-radius: 5px;
+      padding: 5px 20px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="flex-box-container">
+    <div class="category-items">메소드</div>
+    <div class="category-items">프로그래밍</div>
+    <div class="category-items">2차원배열</div>
+    <div class="category-items">문자열</div>
+    <div class="category-items">객체</div>
+    <div class="category-items">메소드</div>
+    <div class="category-items">프로그래밍</div>
+    <div class="category-items">2차원배열</div>
+    <div class="category-items">문자열</div>
+    <div class="category-items">객체</div>
+    <div class="category-items">메소드</div>
+    <div class="category-items">프로그래밍</div>
+    <div class="category-items">2차원배열</div>
+    <div class="category-items">문자열</div>
+    <div class="category-items">객체</div>
+    <div class="category-items">메소드</div>
+    <div class="category-items">프로그래밍</div>
+    <div class="category-items">2차원배열</div>
+    <div class="category-items">문자열</div>
+    <div class="category-items">객체</div>
+  </div>
+</body>
+</html>

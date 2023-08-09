@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main-box {
+      display: flex;
+    }
+    .box1 {
+      display: inline-block; /*글자는 아니지만 박스 옆에 박스를 두고 싶을 때 inline-block*/
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      
+    }
+    .box2 {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      /* line-height: 100px; */
+      
+      /* word-spacing: 100px; */ /*자간*/
+      /*a 태그는 width, height 속성이 적용되지 않음 글자에 대한 너비와 높이를 지정해야 함*/
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="box1">구글</div>
+    <a href="" class="box2">네이버 이동</a>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      /*margin -> border -> padding -> content 순으로 스타일 적용하는 것이 좋음*/
+      box-sizing: border-box;
+      
+      margin: 10px 20px; /*위아래는 10px, 좌우는 20px*/
+      
+      border: 5px solid black;
+       /*border는 상하좌우 한번에 적용 안됨-> border-width 사용*/
+      border-width: 5px 3px 4px 2px; 
+      /*cascading 때문에 위에 border 속성은 적용되지 않음 */
+      
+      padding: 5px 10px 0px;
+       /*몇개가 빠지면 대칭으로 자동 적용*/
+      /* padding-top : 5px;
+      padding-right: 10px; */
+      
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">내용</div>
+</body>
+</html>

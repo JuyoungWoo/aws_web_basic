@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .box2 {
+      box-sizing: border-box; 
+      /* border까지의 width,height를 100px으로 지정한다는 의미 */
+      /*box-sizing: content _*/
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border: 1px solid black;
+      padding: 10px;
+      /**/
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <div class="box1"></div>
+  <div class="box2"></div>
+  
+</body>
+</html>
